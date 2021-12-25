@@ -6,3 +6,21 @@ main {
   background-color: rgb(73, 71, 75);
 }
 
+.carousel-item img {
+  height: 80vh;
+  border-radius: 50%;
+}
+
+.d-inline-block {
+  width: 600px;
+}
+
+.carousel-caption h4 {
+  color: red;
+}
+
+.carousel-control-prev,
+.carousel-control-next,
+.carousel-control-active {
+  display: flex;
+}
