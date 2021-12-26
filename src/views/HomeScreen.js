@@ -4,22 +4,17 @@ const HomeScreen = ({ data }) => {
   return (
     <div className='container-fluid'>
       <div
-        id='carouselExampleDark'
+        id='carouselDark'
         className='carousel carousel-dark slide'
         data-bs-ride='carousel'
       >
         <div className='carousel-inner position-relative'>
-          {data.map((item) => (
+          {data?.map((item, idx) => (
             <div
-              className={`carousel-item ${item.id === '1' ? 'active' : ''}`}
+              className={`carousel-item ${idx === 0 ? 'active' : ''}`}
               key={item.id}
             >
-              <img
-                src={item.image}
-                className='d-block w-100'
-                alt={item.name}
-                fluid
-              />
+              <img src={item.image} className='d-block w-100' alt={item.name} />
               <div className='carousel-caption d-none d-md-block'>
                 <h4 className='fw-bold'>{item.name}</h4>
                 <p className='d-inline-block text-truncate'>
@@ -32,7 +27,7 @@ const HomeScreen = ({ data }) => {
         <button
           className='carousel-control-prev'
           type='button'
-          data-bs-target='#carouselExampleDark'
+          data-bs-target='#carouselDark'
           data-bs-slide='prev'
         >
           <span
@@ -44,7 +39,7 @@ const HomeScreen = ({ data }) => {
         <button
           className='carousel-control-next'
           type='button'
-          data-bs-target='#carouselExampleDark'
+          data-bs-target='#carouselDark'
           data-bs-slide='next'
         >
           <span
