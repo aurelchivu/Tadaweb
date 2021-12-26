@@ -15,7 +15,9 @@ const Gun = ({ gun, checked }) => {
           />
         </div>
       )}
-      <img src={gun.image} className='card-img-top' alt={gun.name} />
+      <Link to={`/nerfguns/${gun.id}`}>
+        <img src={gun.image} className='card-img-top' alt={gun.name} />
+      </Link>
       <div className='card-body'>
         <Link to={`/nerfguns/${gun.id}`}>
           <h5 className='card-title text-center'>{gun.name}</h5>
