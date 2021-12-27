@@ -96,11 +96,7 @@ const GunEditScreen = () => {
                   onChange={(e) => setDescription(e.target.value)}
                 ></textarea>
               </div>
-              <button
-                className='btn btn-secondary'
-                type='submit'
-                variant='primary'
-              >
+              <button className='btn btn-secondary' type='submit'>
                 Update
               </button>
             </form>

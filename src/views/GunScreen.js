@@ -1,10 +1,34 @@
 import React from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
+import axios from 'axios';
 import useFetch from '../utils/useFetch';
 
 const GunScreen = () => {
   const params = useParams();
   const data = useFetch(`http://localhost:8000/guns/${params.id}`);
+
+  const navigate = useNavigate();
+
+  const deleteGun = async () => {
+    try {
+      const config = {
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+      };
+
+      await axios.delete(`http://localhost:8000/guns/${params.id}`, config);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const handleClick = () => {
+    deleteGun();
+    navigate('/nerfguns');
+  };
+
   return (
     <div className='container-fluid'>
       {data && (
@@ -20,13 +44,67 @@ const GunScreen = () => {
                     Edit Gun
                   </Link>
                 </div>
-                <div className='p-2 bd-highlight'>
+                <div className='p-4 bd-highlight'>
+                  {/* <button
+                    type='button'
+                    className='btn btn-outline-danger'
+                    onClick={handleClick}
+                  >
+                    Delete Gun
+                  </button> */}
+
                   <button
                     type='button'
-                    className='btn btn-outline-danger ml-3 py-1'
+                    className='btn btn-outline-danger'
+                    data-bs-toggle='modal'
+                    data-bs-target='#exampleModal'
                   >
                     Delete Gun
                   </button>
+
+                  <div
+                    className='modal fade'
+                    id='exampleModal'
+                    tabIndex='-1'
+                    aria-labelledby='exampleModalLabel'
+                    aria-hidden='true'
+                  >
+                    <div className='modal-dialog'>
+                      <div className='modal-content'>
+                        <div className='modal-header'>
+                          <h5 className='modal-title' id='exampleModalLabel'>
+                            Delete confirmation
+                          </h5>
+                          <button
+                            type='button'
+                            className='btn-close'
+                            data-bs-dismiss='modal'
+                            aria-label='Close'
+                          ></button>
+                        </div>
+                        <div className='modal-body'>
+                          Are you sure you want to delete this item?
+                        </div>
+                        <div className='modal-footer'>
+                          <button
+                            type='button'
+                            className='btn btn-secondary'
+                            data-bs-dismiss='modal'
+                          >
+                            No! Get me out of here!
+                          </button>
+                          <button
+                            type='button'
+                            className='btn btn-outline-danger'
+                            onClick={handleClick}
+                            data-bs-dismiss='modal'
+                          >
+                            Yes! Delete it!
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

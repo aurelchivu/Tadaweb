@@ -10,7 +10,7 @@ const NerfGunsScreen = () => {
       {data && (
         <>
           <div className='d-flex justify-content-between'>
-            <Link to='/' className='btn btn-outline-success'>
+            <Link to='/nerfguns/addgun' className='btn btn-outline-success'>
               Add New Gun
             </Link>
             <button type='button' className='btn btn-outline-danger'>
