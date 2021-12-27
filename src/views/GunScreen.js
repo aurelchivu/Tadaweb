@@ -5,7 +5,7 @@ import useFetch from '../utils/useFetch';
 
 const GunScreen = () => {
   const params = useParams();
-  const data = useFetch(`http://localhost:8000/guns/${params.id}`);
+  const { data } = useFetch(`http://localhost:8000/guns/${params.id}`);
 
   const navigate = useNavigate();
 
@@ -45,14 +45,6 @@ const GunScreen = () => {
                   </Link>
                 </div>
                 <div className='p-4 bd-highlight'>
-                  {/* <button
-                    type='button'
-                    className='btn btn-outline-danger'
-                    onClick={handleClick}
-                  >
-                    Delete Gun
-                  </button> */}
-
                   <button
                     type='button'
                     className='btn btn-outline-danger'

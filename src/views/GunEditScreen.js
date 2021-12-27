@@ -10,7 +10,7 @@ const GunEditScreen = () => {
   const [description, setDescription] = useState('');
 
   const params = useParams();
-  const data = useFetch(`http://localhost:8000/guns/${params.id}`);
+  const { data } = useFetch(`http://localhost:8000/guns/${params.id}`);
 
   const navigate = useNavigate();
 

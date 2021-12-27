@@ -20,6 +20,10 @@ const App = () => {
           <Route path='/about' element={<AboutScreen />} />
           <Route path='/contact' element={<ContactScreen />} />
           <Route path='/nerfguns' element={<NerfGunsScreen />} />
+          <Route
+            path='/nerfguns/page/:pageNumber'
+            element={<NerfGunsScreen />}
+          />
           <Route path='/nerfguns/addgun' element={<AddGunScreen />} />
           <Route path='/nerfguns/:id' element={<GunScreen />} />
           <Route path='/nerfguns/:id/edit' element={<GunEditScreen />} />

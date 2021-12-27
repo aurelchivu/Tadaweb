@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const useFetch = (url) => {
+const useFetch = (url, page, pageSize) => {
   const [data, setData] = useState(null);
+  const [pages, setPages] = useState(null);
 
   useEffect(() => {
     const getData = async () => {
@@ -14,17 +15,21 @@ const useFetch = (url) => {
           },
         };
 
-        const { data } = await axios.get(url, config);
+        const { data, headers } = await axios.get(
+          `${url}?_page=${page}&_limit=${pageSize}`,
+          config
+        );
 
         setData(data);
+        setPages(Math.ceil(headers['x-total-count'] / pageSize));
       } catch (error) {
         console.log(error);
       }
     };
     getData();
-  }, [url]);
+  }, [url, page, pages, pageSize]);
 
-  return data;
+  return { data, pages };
 };
 
 export default useFetch;

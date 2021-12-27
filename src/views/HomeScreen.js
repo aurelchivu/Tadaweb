@@ -2,7 +2,7 @@ import React from 'react';
 import useFetch from '../utils/useFetch';
 
 const HomeScreen = () => {
-  const data = useFetch('http://localhost:8000/guns');
+  const { data } = useFetch('http://localhost:8000/guns');
   return (
     <div className='container-fluid'>
       {data && (

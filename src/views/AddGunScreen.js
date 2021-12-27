@@ -5,7 +5,7 @@ import FormContainer from '../components/FormContainer';
 import useFetch from '../utils/useFetch';
 
 const AddGunScreen = () => {
-  const data = useFetch('http://localhost:8000/guns');
+  const { data } = useFetch('http://localhost:8000/guns');
 
   const [id, setId] = useState(0);
   const [name, setName] = useState('');
