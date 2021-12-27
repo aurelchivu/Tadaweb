@@ -1,20 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Gun = ({ gun, checked }) => {
+const Gun = ({ gun }) => {
   return (
     <div className='card my-3 p-3 rounded'>
-      {checked && (
-        <div>
-          <input
-            className='form-check-input'
-            type='checkbox'
-            value=''
-            id='flexCheckDefault'
-            checked={checked}
-          />
-        </div>
-      )}
       <Link to={`/nerfguns/${gun.id}`}>
         <img src={gun.image} className='card-img-top' alt={gun.name} />
       </Link>

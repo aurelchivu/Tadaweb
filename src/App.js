@@ -3,6 +3,7 @@ import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import AboutScreen from './views/AboutScreen';
 import ContactScreen from './views/ContactScreen';
+import GunEditScreen from './views/GunEditScreen';
 import GunScreen from './views/GunScreen';
 import HomeScreen from './views/HomeScreen';
 import NerfGunsScreen from './views/NerfGunsScreen';
@@ -19,6 +20,7 @@ const App = () => {
           <Route path='/contact' element={<ContactScreen />} />
           <Route path='/nerfguns' element={<NerfGunsScreen />} />
           <Route path='/nerfguns/:id' element={<GunScreen />} />
+          <Route path='/nerfguns/:id/edit' element={<GunEditScreen />} />
           <Route path='*' element={<h3>Ups! No nerf gun here...</h3>} />
         </Routes>
       </main>

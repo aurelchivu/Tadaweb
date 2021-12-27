@@ -11,13 +11,16 @@ const GunScreen = () => {
         <>
           <div className='row'>
             <div className='col-md-5'>
-              <div class='d-flex justify-content-between'>
-                <div class='p-2 bd-highlight'>
-                  <Link to='/nerfguns' className='btn btn-outline-success my-3'>
+              <div className='d-flex justify-content-between'>
+                <div className='p-2 bd-highlight'>
+                  <Link
+                    to={`/nerfguns/${params.id}/edit`}
+                    className='btn btn-outline-success my-3'
+                  >
                     Edit Gun
                   </Link>
                 </div>
-                <div class='p-2 bd-highlight'>
+                <div className='p-2 bd-highlight'>
                   <button
                     type='button'
                     className='btn btn-outline-danger ml-3 py-1'
