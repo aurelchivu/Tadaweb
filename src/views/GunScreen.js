@@ -3,6 +3,7 @@ import { Link, useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { motion } from 'framer-motion';
 import useFetch from '../utils/useFetch';
+import Meta from '../components/Meta';
 
 const GunScreen = () => {
   const params = useParams();
@@ -34,6 +35,7 @@ const GunScreen = () => {
     <div className='container-fluid'>
       {data && (
         <>
+          <Meta title={`My Cool App | ${data.name}`} />
           <div className='row'>
             <motion.div
               className='col-md-5'

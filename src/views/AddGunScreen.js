@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { motion } from 'framer-motion';
 import FormContainer from '../components/FormContainer';
+import Meta from '../components/Meta';
 import useFetch from '../utils/useFetch';
 
 const AddGunScreen = () => {
@@ -48,6 +49,7 @@ const AddGunScreen = () => {
 
   return (
     <div className='container-fluid'>
+      <Meta title={'My Cool App | Add Gun'} />
       <FormContainer>
         <motion.h2
           className='my-3'

@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import axios from 'axios';
 import { motion } from 'framer-motion';
 import Gun from '../components/Gun';
+import Meta from '../components/Meta';
 
 const NerfGunsScreen = () => {
   const params = useParams();
@@ -65,6 +66,7 @@ const NerfGunsScreen = () => {
 
   return (
     <div className='container-fluid'>
+      <Meta title={'My Cool App | Nerf Guns'} />
       {data && (
         <>
           <motion.div

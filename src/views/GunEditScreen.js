@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { motion } from 'framer-motion';
 import FormContainer from '../components/FormContainer';
+import Meta from '../components/Meta';
 import useFetch from '../utils/useFetch';
 
 const GunEditScreen = () => {
@@ -50,6 +51,7 @@ const GunEditScreen = () => {
 
   return (
     <div className='container-fluid'>
+      <Meta title={'My Cool App | Edit Gun'} />
       {data && (
         <>
           <FormContainer>

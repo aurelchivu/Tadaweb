@@ -1,9 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import Meta from '../components/Meta';
 
 const AboutScreen = () => {
   return (
     <div className='container-fluid'>
+      <Meta title={'My Cool App | About'} />
       <motion.h1
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}

@@ -1,10 +1,12 @@
 import React from 'react';
+import Meta from '../components/Meta';
 import useFetch from '../utils/useFetch';
 
 const HomeScreen = () => {
   const { data } = useFetch('http://localhost:8000/guns');
   return (
     <div className='container-fluid'>
+      <Meta title={'My Cool App | Home'} />
       {data && (
         <>
           <div

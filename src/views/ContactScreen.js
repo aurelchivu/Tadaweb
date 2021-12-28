@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router';
 import { motion } from 'framer-motion';
 import FormContainer from '../components/FormContainer';
+import Meta from '../components/Meta';
 
 const ContactScreen = () => {
   const navigate = useNavigate();
@@ -16,6 +17,7 @@ const ContactScreen = () => {
 
   return (
     <div className='container-fluid'>
+      <Meta title={'My Cool App | Contact'} />
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
