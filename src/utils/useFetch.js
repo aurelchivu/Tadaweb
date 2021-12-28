@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const useFetch = (url, page, pageSize) => {
   const [data, setData] = useState(null);
-  const [pages, setPages] = useState(null);
+  const [headers, setHeaders] = useState(null);
 
   useEffect(() => {
     const getData = async () => {
@@ -15,21 +15,18 @@ const useFetch = (url, page, pageSize) => {
           },
         };
 
-        const { data, headers } = await axios.get(
-          `${url}?_page=${page}&_limit=${pageSize}`,
-          config
-        );
+        const { data, headers } = await axios.get(url, config);
 
         setData(data);
-        setPages(Math.ceil(headers['x-total-count'] / pageSize));
+        setHeaders(headers);
       } catch (error) {
         console.log(error);
       }
     };
     getData();
-  }, [url, page, pages, pageSize]);
+  }, [url]);
 
-  return { data, pages };
+  return { data, headers };
 };
 
 export default useFetch;

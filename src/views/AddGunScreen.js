@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useParams, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { motion } from 'framer-motion';
 import FormContainer from '../components/FormContainer';
 import useFetch from '../utils/useFetch';
 
@@ -47,13 +48,22 @@ const AddGunScreen = () => {
 
   return (
     <div className='container-fluid'>
-      <Link to='/nerfguns' className='btn btn-secondary my-3 ml-3'>
-        Go Back
-      </Link>
       <FormContainer>
-        <h2>Add New Gun</h2>
+        <motion.h2
+          className='my-3'
+          initial={{ translateX: -500 }}
+          animate={{ translateX: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          Add New Gun
+        </motion.h2>
         <form onSubmit={submitHandler}>
-          <div className='mb-3'>
+          <motion.div
+            className='mb-3'
+            initial={{ translateX: 1000 }}
+            animate={{ translateX: 0 }}
+            transition={{ duration: 0.8 }}
+          >
             <label htmlFor='textInput' className='form-label'>
               Id
             </label>
@@ -65,8 +75,13 @@ const AddGunScreen = () => {
               value={id}
               onChange={(e) => setId(e.target.value)}
             />
-          </div>
-          <div className='mb-3'>
+          </motion.div>
+          <motion.div
+            className='mb-3'
+            initial={{ translateX: -1000 }}
+            animate={{ translateX: 0 }}
+            transition={{ duration: 0.8 }}
+          >
             <label htmlFor='textInput' className='form-label'>
               Name
             </label>
@@ -78,8 +93,13 @@ const AddGunScreen = () => {
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
-          </div>
-          <div className='mb-3'>
+          </motion.div>
+          <motion.div
+            className='mb-3'
+            initial={{ translateX: 1000 }}
+            animate={{ translateX: 0 }}
+            transition={{ duration: 0.8 }}
+          >
             <label htmlFor='textInput' className='form-label'>
               Image
             </label>
@@ -91,8 +111,13 @@ const AddGunScreen = () => {
               value={image}
               onChange={(e) => setImage(e.target.value)}
             />
-          </div>
-          <div className='mb-3'>
+          </motion.div>
+          <motion.div
+            className='mb-3'
+            initial={{ translateX: -1000 }}
+            animate={{ translateX: 0 }}
+            transition={{ duration: 0.8 }}
+          >
             <label htmlFor='formControlTextarea1' className='form-label'>
               Description
             </label>
@@ -104,10 +129,16 @@ const AddGunScreen = () => {
               value={description}
               onChange={(e) => setDescription(e.target.value)}
             ></textarea>
-          </div>
-          <button className='btn btn-secondary' type='submit'>
+          </motion.div>
+          <motion.button
+            className='btn btn-secondary'
+            type='submit'
+            initial={{ translateY: -1000 }}
+            animate={{ translateY: 0 }}
+            transition={{ duration: 0.8 }}
+          >
             Add Gun
-          </button>
+          </motion.button>
         </form>
       </FormContainer>
     </div>

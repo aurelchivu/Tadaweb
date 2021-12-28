@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { motion } from 'framer-motion';
 import useFetch from '../utils/useFetch';
 
 const GunScreen = () => {
@@ -34,7 +35,12 @@ const GunScreen = () => {
       {data && (
         <>
           <div className='row'>
-            <div className='col-md-5'>
+            <motion.div
+              className='col-md-5'
+              initial={{ translateY: -100 }}
+              animate={{ translateY: 0 }}
+              transition={{ duration: 0.8 }}
+            >
               <div className='d-flex justify-content-between'>
                 <div className='p-2 bd-highlight'>
                   <Link
@@ -99,21 +105,49 @@ const GunScreen = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
           <div className='row'>
-            <div className='col-md-5'>
+            <motion.div
+              className='col-md-5'
+              initial={{
+                opacity: 0,
+                translateY: 400,
+              }}
+              animate={{
+                opacity: 1,
+                translateY: 0,
+              }}
+              transition={{
+                duration: 0.7,
+                delay: 0.5,
+              }}
+            >
               <img
                 src={data.image}
                 alt={data.name}
                 className='img-fluid thumbnail-box-shadow'
               ></img>
-            </div>
+            </motion.div>
             <div className='col-md-1'></div>
-            <div className='col-md-6'>
+            <motion.div
+              className='col-md-6'
+              initial={{
+                opacity: 0,
+                translateX: 400,
+              }}
+              animate={{
+                opacity: 1,
+                translateX: 0,
+              }}
+              transition={{
+                duration: 1,
+                delay: 0.5,
+              }}
+            >
               <h2 className='my-3'>{data.name}</h2>
               <p>{data.description}</p>
-            </div>
+            </motion.div>
             <div className='col-md-3'></div>
           </div>
         </>
