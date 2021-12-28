@@ -2,9 +2,9 @@
   "guns": [
     {
       "id": 1,
-      "name": "Motostryke",
-      "image": "/images/Motostryke.jpeg",
-      "description": "Intimidating. Definitely. Impressive. Absolutely! Huge, powerful, and fast, the Nerf Mega Motostryke blaster blisters the battlefield with motorized, 10-dart blasting. This is a blaster that demands attention and gets it. Power up the motor and pull the trigger to send a big Nerf Mega dart whistling through the air. Start blasting! Load darts into the clip, and insert the full clip into the blaster. Hold down the acceleration button to rev the motor, and pull the trigger to fire 1 dart. Pull the trigger again to fire another dart. Strike big and strike fast with the Nerf Mega Motostryke blaster!"
+      "name": "Pump",
+      "image": "/images/Pump.jpeg",
+      "description": "Inspired by the equipment used in Fortnite, the Nerf Mega Pump SG blaster captures the look of the one in the popular video game. Fire a big Nerf Mega dart into the battle and dominate the map! It's easy to get ready for action: Open the door on the side of this breech-load blaster, load 1 dart inside, pump the slide backward and forward to prime the blaster, and press the trigger to send the dart flying through the air. "
     },
     {
       "id": 2,
@@ -120,11 +120,12 @@
       "image": "/images/Takedown.jpeg",
       "description": "Take on and take down all challengers in Nerf Rival games with the pump-action Nerf Rival Takedown XX-800 blaster. Load this spring-action blaster, pump the priming handle, and press the trigger to fire 1 round. The Takedown XX-800 blaster has an 8-round capacity, so choose your targets and fire 8 rounds in a row. Go the distance with this Team Red blaster that launches rounds at 90 feet per second. "
     },
+
     {
       "id": 21,
-      "name": "Pump",
-      "image": "/images/Pump.jpeg",
-      "description": "Inspired by the equipment used in Fortnite, the Nerf Mega Pump SG blaster captures the look of the one in the popular video game. Fire a big Nerf Mega dart into the battle and dominate the map! It's easy to get ready for action: Open the door on the side of this breech-load blaster, load 1 dart inside, pump the slide backward and forward to prime the blaster, and press the trigger to send the dart flying through the air. "
+      "name": "Motostryke",
+      "image": "/images/Motostryke.jpeg",
+      "description": "Intimidating. Definitely. Impressive. Absolutely! Huge, powerful, and fast, the Nerf Mega Motostryke blaster blisters the battlefield with motorized, 10-dart blasting. This is a blaster that demands attention and gets it. Power up the motor and pull the trigger to send a big Nerf Mega dart whistling through the air. Start blasting! Load darts into the clip, and insert the full clip into the blaster. Hold down the acceleration button to rev the motor, and pull the trigger to fire 1 dart. Pull the trigger again to fire another dart. Strike big and strike fast with the Nerf Mega Motostryke blaster!"
     }
   ]
 }
