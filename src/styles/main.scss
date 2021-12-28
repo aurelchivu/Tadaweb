@@ -4,8 +4,6 @@
 // import functions first (so you can use them in this file)
 @import '../../node_modules/bootstrap/scss/functions';
 
-// redefine variables not dependent on anything else
-
 // global variables
 $enable-rounded: true;
 $enable-button-pointers: true;
@@ -20,15 +18,6 @@ $light: #ceda62;
 // font family
 $font-family-base: 'Cinzel Decorative';
 
-// font sizes
-// $font-size-base: 1rem;
-// $lead-font-size: $font-size-base * 1.5;
-
-// headings
-// $headings-font-weight: 300;
-// $headings-line-height: 1.5;
-// $h1-font-size: $font-size-base * 2.75;
-
 // links
 $link-color: red;
 $link-decoration: none;
@@ -36,40 +25,12 @@ $link-hover-decoration: none;
 $link-shade-percentage: 90%;
 $link-hover-color: shift-color($link-color, -$link-shade-percentage);
 
-// spacers
-// $spacer: 1.5rem;
-// $spacers: (
-//   0: 0,
-//   1: $spacer / 4,
-//   2: $spacer / 2,
-//   3: $spacer,
-//   4: $spacer * 2,
-//   5: $spacer * 4,
-// );
-
-// borders
-// $border-width: 3px;
-// $border-widths: (
-//   1: 1px,
-//   2: 3px,
-//   3: 5px,
-//   4: 7px,
-//   5: 9px
-// );
-
 $border-color: $secondary;
 
 // import variables and mixins files (so you can use them below)
 // any redefined vars above will be incorporated into the files (e.g. in maps)
 @import '../../node_modules/bootstrap/scss/variables';
 @import '../../node_modules/bootstrap/scss/mixins';
-
-// anything that depends on variables/mixins file defined below
-
-// .btn-truncate {
-//   max-width: 100px;
-//   @include text-truncate;
-// }
 
 // add colors to theme
 $custom-colors: (
@@ -102,12 +63,6 @@ $theme-colors: map-remove($theme-colors, 'danger');
     color: shade-color($val, 30%);
   }
 }
-
-// add display heading
-// $custom-display-font-sizes: (
-//   7: 2rem,
-// );
-// $display-font-sizes: map-merge($custom-display-font-sizes, $display-font-sizes);
 
 // utility api - import utility file first
 @import '../../node_modules/bootstrap/scss/utilities';
@@ -144,22 +99,6 @@ $custom-utilities: (
   ),
 );
 $utilities: map-merge($utilities, $custom-utilities);
-
-// modifying utilities
-// $modified-utilities: (
-//   "border-bottom": (
-//     property: border-bottom,
-//     values: (
-//       null: $border-width dotted $border-color,
-//       0: 0,
-//     )
-//   ),
-//   "display": map-merge(
-//     map-get($utilities, "display"),
-//     ( class: dis ),
-//   ),
-// );
-// $utilities: map-merge($utilities, $modified-utilities);
 
 // import bootstrap whole sass lib (incorporates all above redefined vars & values)
 @import '../../node_modules/bootstrap/scss/bootstrap';

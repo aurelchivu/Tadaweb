@@ -10,9 +10,11 @@ const NerfGunsScreen = () => {
 
   const page = params.pageNumber || 1;
   const pageSizes = [4, 8, 20, 50];
-  const [data, setData] = useState(null);
+  let [data, setData] = useState(null);
   const [pages, setPages] = useState(null);
   const [pageSize, setPageSize] = useState(pageSizes[3]);
+  const [keyword, setKeyword] = useState('');
+  const [guns, setGuns] = useState([]);
 
   const url = 'http://localhost:8000/guns';
 
@@ -64,6 +66,17 @@ const NerfGunsScreen = () => {
     });
   };
 
+  const handleChange = (e) => {
+    e.preventDefault();
+    setKeyword(e.target.value.toLowerCase());
+  };
+
+  if (keyword.length > 0) {
+    data = data.filter((u) => {
+      return u.name.toLowerCase().match(keyword);
+    });
+  }
+
   return (
     <div className='container-fluid'>
       <Meta title={'My Cool App | Nerf Guns'} />
@@ -78,6 +91,16 @@ const NerfGunsScreen = () => {
             <Link to='/nerfguns/addgun' className='btn btn-outline-success'>
               Add New Gun
             </Link>
+            <form className='d-flex col-4'>
+              <input
+                className='form-control me-5'
+                type='search'
+                placeholder='Search guns...'
+                aria-label='Search'
+                value={keyword}
+                onChange={handleChange}
+              />
+            </form>
             <div className='row'>
               <div className='col'>
                 <select
