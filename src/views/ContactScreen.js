@@ -118,7 +118,7 @@ const ContactScreen = () => {
                 <div className='modal-content'>
                   <div className='modal-header'>
                     <h5 className='modal-title' id='exampleModalLabel'>
-                      Sent message successfully!
+                      thank you for your message!
                     </h5>
                     <button
                       type='button'

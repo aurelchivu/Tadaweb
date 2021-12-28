@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const useFetch = (url, page, pageSize) => {
+const useFetch = (url) => {
   const [data, setData] = useState(null);
   const [headers, setHeaders] = useState(null);
 

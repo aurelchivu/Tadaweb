@@ -4,21 +4,12 @@ import axios from 'axios';
 import { motion } from 'framer-motion';
 import FormContainer from '../components/FormContainer';
 import Meta from '../components/Meta';
-import useFetch from '../utils/useFetch';
 
 const AddGunScreen = () => {
-  const { data } = useFetch('http://localhost:8000/guns');
-
-  const [id, setId] = useState(0);
+  const [id, setId] = useState('');
   const [name, setName] = useState('');
   const [image, setImage] = useState('');
   const [description, setDescription] = useState('');
-
-  useEffect(() => {
-    if (data) {
-      setId(data.length + 1);
-    }
-  }, [data]);
 
   const navigate = useNavigate();
 

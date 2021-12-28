@@ -14,7 +14,6 @@ const NerfGunsScreen = () => {
   const [pages, setPages] = useState(null);
   const [pageSize, setPageSize] = useState(pageSizes[3]);
   const [keyword, setKeyword] = useState('');
-  const [guns, setGuns] = useState([]);
 
   const url = 'http://localhost:8000/guns';
 
@@ -86,7 +85,7 @@ const NerfGunsScreen = () => {
             className='d-flex justify-content-between'
             initial={{ translateY: -100 }}
             animate={{ translateY: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 1 }}
           >
             <Link to='/nerfguns/addgun' className='btn btn-outline-success'>
               Add New Gun
