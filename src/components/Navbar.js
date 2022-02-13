@@ -19,13 +19,11 @@ const Navbar = () => {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+        <div className="collapse navbar-collapse " id="navbarSupportedContent">
+          <ul className="navbar-nav mb-2 mb-lg-0 ml-auto ">
             <li className="nav-item px-2">
               <Link to="/about">About us</Link>
             </li>
-          </ul>
-          <ul className="navbar-nav ml-auto mb-2 mb-lg-0">
             <li className="nav-item px-2">
               <Link to="/contact">Contact</Link>
             </li>

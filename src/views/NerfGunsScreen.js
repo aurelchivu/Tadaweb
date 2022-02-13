@@ -70,8 +70,8 @@ const NerfGunsScreen = () => {
     setKeyword(e.target.value.toLowerCase());
   };
 
-  const search = (gun) => {
-    return gun.filter((g) => g.name.toLowerCase().match(keyword));
+  const search = (guns) => {
+    return guns.filter((g) => g.name.toLowerCase().match(keyword));
   };
 
   return (

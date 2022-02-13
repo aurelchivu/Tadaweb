@@ -1,5 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const Meta = ({ title }) => {
   return (
@@ -10,7 +10,7 @@ const Meta = ({ title }) => {
 };
 
 Meta.defaultProps = {
-  title: 'My Cool App',
+  title: "My Cool App",
 };
 
 export default Meta;
